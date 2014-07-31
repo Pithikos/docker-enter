@@ -241,7 +241,7 @@ int main (int argc, char *argv[]) {
 	if (strlen(user)>0)
 		execlp( "su", "su", user, (char*)0 );
 
-	// Run cell
+	// Run shell
 	exec_shell();
 	return 0;
 }
