@@ -11,12 +11,13 @@ Besides solving some nsenter issues and being super easy to compile, it further 
 * Enter as a specific user
 * Enter a specific folder
 
-Keep in mind that this tool needs docker installed in order to run. However since you want to enter a container, it's implied that you already have it installed anyway.
+Keep in mind that this tool needs docker installed in order to run. However since you want to enter a container, it's implied that you already have it installed so no fuss.
 
 
 # Compile
-Compilation doesn't need any special flags. Just run:
+Compilation doesn't need anything more than GCC installed. On Ubuntu:
 ```
+sudo apt-get install gcc
 gcc docker-enter.c -o docker-enter
 ```
 
