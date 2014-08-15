@@ -1,5 +1,8 @@
-Author: Johan Hanssen Seferidis
-Description: Similar to nsenter. The difference is that it is docker oriented, thus it avoids some bugs that nsenter might have.
+**Author**
+Johan Hanssen Seferidis
+**Description**
+Similar to nsenter. The difference is that it is docker oriented, thus it avoids some bugs that nsenter might have.
+
 =======================================================================
              
 # Why use this
@@ -13,10 +16,14 @@ Keep in mind that this tool needs docker installed in order to run. However sinc
 
 # Compile
 Compilation doesn't need any special flags. Just run:
-    gcc docker-enter.c -o docker-enter
+```
+gcc docker-enter.c -o docker-enter
+```
 
 
 # Run
 To run you just need to provide the container ID. Notice that it
 even accepts the **short ID** like in docker.
-    ./docker-enter [-u <user>] [-d <directory>] <container ID>
+```
+./docker-enter [-u <user>] [-d <directory>] <container ID>
+```
