@@ -21,10 +21,20 @@ sudo apt-get install gcc
 gcc docker-enter.c -o docker-enter
 ```
 
-
 # Run
 To run you just need to provide the container ID. Notice that it
 even accepts the **short ID** like in docker.
 ```
-./docker-enter [-u <user>] [-d <directory>] <container ID>
+sudo ./docker-enter [-u <user>] [-d <directory>] <container ID>
 ```
+
+# Move the binary
+You probably want to move the file to the appropriate folder so that
+you can run it directly from a terminal without having to issue the full or relative path of docker-enter each time.
+
+On Ubuntu:
+```
+sudo mv ./docker-enter $(echo $PATH | cut -f1 -d:)
+```
+
+This will move it to the first bin folder found in $PATH. After that you can use docker-enter from wherever in the system.
