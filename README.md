@@ -1,5 +1,6 @@
 **Description**
-Let's a user enter an already running container. Works similar to nsenter without the bugs and dependancies. It further adds some docker oriented functionality (see below for details).
+
+Let's a user enter an already running container. Works similar to nsenter without the bugs and dependencies. It further adds some docker oriented functionality (see below for details).
 
 
 =======================================================================
