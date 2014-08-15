@@ -1,11 +1,10 @@
-**Author**
-Johan Hanssen Seferidis
-
 **Description**
-Similar to nsenter. The difference is that it is docker oriented, thus it avoids some bugs that nsenter might have.
+Let's a user enter an already running container. Works similar to nsenter without the bugs and dependancies. It further adds some docker oriented functionality (see below for details).
+
 
 =======================================================================
              
+
 # Why use this
 Besides solving some nsenter issues and being super easy to compile, it further supports:
 * Accepts short container ID
