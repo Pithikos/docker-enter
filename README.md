@@ -1,18 +1,17 @@
-**Description**
+# What is docker-enter
 
-Let's a user enter an already running container. Works similar to nsenter without the bugs and dependencies. It further adds some docker oriented functionality (see below for details).
-
-
-=======================================================================
-             
-
-# Why use this
-Besides solving some nsenter issues and being super easy to compile, it further supports:
-* Accepts short container ID
-* Enter as a specific user
-* Enter a specific folder
+docker-enter is a simple program that let's you access a running Docker container. This is similar to nsenter **BUT** without all the bugs and dependencies. Furthermore docker-enter makes use of the docker itself making it possible to use short ID of the container (2-3 first characters of the ID).
 
 Keep in mind that this tool needs docker installed in order to run. However since you want to enter a container, it's implied that you already have it installed so no fuss.
+
+Demonstration:
+````
+manos@box:~$ docker run -d ubuntu sleep 9999999
+73d6cfac58c1b8ade19ec485b249f5a7bf44840bdeeebf36cd675f05625b47ab
+manos@box:~$ sudo docker-enter 73d
+[sudo] password for manos: 
+root@73d6cfac58c1:/# 
+````
 
 
 # Compile
@@ -24,18 +23,17 @@ gcc docker-enter.c -o docker-enter
 
 # Run
 To run you just need to provide the container ID. Notice that it
-even accepts the **short ID** like in docker.
+even accepts the short ID of a container.
+
 ```
 sudo ./docker-enter [-u <user>] [-d <directory>] <container ID>
 ```
 
-# Move the binary
-You probably want to move the file to the appropriate folder so that
-you can run it directly from a terminal without having to issue the full or relative path of docker-enter each time.
+# Install
+With the previous steps you can use docker-enter by giving the full or relative path to it every time. If you however want to be able and use it from anywhere on your computer you probably want to move the binary to `/usr/bin`.
 
-On Ubuntu:
 ```
-sudo mv ./docker-enter $(echo $PATH | cut -f1 -d:)
+sudo mv ./docker-enter /usr/bin
 ```
 
-This will move it to the first bin folder found in $PATH. After that you can use docker-enter from wherever in the system.
+Once that is done, you can open a terminal and run docker-enter directly.
