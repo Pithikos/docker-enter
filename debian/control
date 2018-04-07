@@ -1,0 +1,13 @@
+Source: docker-enter
+Maintainer: Enrico Weigelt, metux IT consult <info@metux.net>
+Section: admin
+Priority: optional
+Build-Depends: make
+Standards-Version: 3.9.7
+Homepage: https://github.com/Pithikos/docker-enter.git
+
+Package: docker-enter
+Architecture: any
+Section: admin
+Depends: ${misc:Depends}
+Description: Enter a running docker container

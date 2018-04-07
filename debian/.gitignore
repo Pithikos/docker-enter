@@ -1,0 +1,5 @@
+/debhelper-build-stamp
+/docker-enter.debhelper.log
+/docker-enter.substvars
+/docker-enter/
+/files

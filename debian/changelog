@@ -1,0 +1,5 @@
+docker-enter (0.0-xenial0) xenial; urgency=low
+
+  * Packaging for xenial
+
+ -- Enrico Weigelt, metux IT consult <info@metux.net>  Sat, 07 Apr 2018 17:25:00 +0100
